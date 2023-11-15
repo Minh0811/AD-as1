@@ -1,5 +1,10 @@
 package com.khaiminh.assignment1vokhaiminh;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+import java.io.IOException;
+import java.io.InputStream;
 import com.khaiminh.assignment1vokhaiminh.Models.FitnessChallenge;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,15 +27,33 @@ public class HomeScreenActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewFitnessChallenges);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Initialize and populate the fitnessChallenges list
-        fitnessChallenges = new ArrayList<>();
-        // Add some sample data to the list
-        fitnessChallenges.add(new FitnessChallenge(1, "Challenge 1", "Description 1", 30, "Type 1"));
-        fitnessChallenges.add(new FitnessChallenge(2, "Challenge 2", "Description 2", 45, "Type 2"));
-        fitnessChallenges.add(new FitnessChallenge(3, "Challenge 3", "Description 3", 60, "Type 3"));
-        // ... Add as many challenges as you want
+        String json = loadJSONFromAsset();
+        List<FitnessChallenge> fitnessChallenges = parseFitnessChallenges(json);
 
         adapter = new FitnessChallengeAdapter(fitnessChallenges);
         recyclerView.setAdapter(adapter);
     }
+
+
+    private String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("fitness_challenges.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+    private List<FitnessChallenge> parseFitnessChallenges(String json) {
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<FitnessChallenge>>(){}.getType();
+        return gson.fromJson(json, type);
+    }
+
 }
