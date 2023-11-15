@@ -17,5 +17,35 @@ public class FitnessChallenge {
     }
 
     // Getters and setters
-    // ...
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public int getDuration() {
+        return duration;
+    }
+    public String getChallengeType() {
+        return challengeType;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+    public void setChallengeType(String challengeType) {
+        this.challengeType = challengeType;
+    }
 }
