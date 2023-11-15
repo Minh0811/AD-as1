@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "30-Day Yoga Journey",
+    "description": "A comprehensive yoga program for mind and body wellness.",
+    "duration": 30,
+    "challengeType": "Yoga"
+  },
+  {
+    "id": 2,
+    "name": "10K Running Plan",
+    "description": "A running plan designed to get you to a 10K finish line in 8 weeks.",
+    "duration": 56,
+    "challengeType": "Running"
+  },
+  {
+    "id": 3,
+    "name": "Bodyweight Bootcamp",
+    "description": "A high-intensity, bodyweight-only workout challenge.",
+    "duration": 30,
+    "challengeType": "Strength"
+  },
+  {
+    "id": 4,
+    "name": "21-Day Meditation Challenge",
+    "description": "Improve mindfulness and reduce stress with daily guided meditations.",
+    "duration": 21,
+    "challengeType": "Meditation"
+  },
+  {
+    "id": 5,
+    "name": "Beginner's Pilates Series",
+    "description": "A gentle introduction to Pilates for core strength and flexibility.",
+    "duration": 30,
+    "challengeType": "Pilates"
+  },
+  {
+    "id": 6,
+    "name": "Full-Body HIIT Challenge",
+    "description": "High-Intensity Interval Training for a full-body workout.",
+    "duration": 30,
+    "challengeType": "HIIT"
+  },
+  {
+    "id": 7,
+    "name": "Cycling Endurance Program",
+    "description": "Build stamina and endurance with this cycling program.",
+    "duration": 45,
+    "challengeType": "Cycling"
+  },
+  {
+    "id": 8,
+    "name": "Swimming Skills Improvement",
+    "description": "Enhance your swimming technique and speed.",
+    "duration": 30,
+    "challengeType": "Swimming"
+  },
+  {
+    "id": 9,
+    "name": "Strength Training for Beginners",
+    "description": "A foundational program to start strength training.",
+    "duration": 30,
+    "challengeType": "Strength"
+  },
+  {
+    "id": 10,
+    "name": "Advanced Core Challenge",
+    "description": "A challenging program focused on core strength and stability.",
+    "duration": 30,
+    "challengeType": "Core"
+  }
+]
