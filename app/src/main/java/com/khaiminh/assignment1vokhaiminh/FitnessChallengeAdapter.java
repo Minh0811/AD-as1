@@ -11,6 +11,11 @@ public class FitnessChallengeAdapter extends RecyclerView.Adapter<FitnessChallen
 
     private List<FitnessChallenge> fitnessChallenges;
 
+    // Constructor accepting a list of FitnessChallenge
+    public FitnessChallengeAdapter(List<FitnessChallenge> fitnessChallenges) {
+        this.fitnessChallenges = fitnessChallenges;
+    }
+
     // Constructor and other necessary methods
 
     @Override
@@ -28,7 +33,7 @@ public class FitnessChallengeAdapter extends RecyclerView.Adapter<FitnessChallen
 
     @Override
     public int getItemCount() {
-        return fitnessChallenges.size();
+        return fitnessChallenges != null ? fitnessChallenges.size() : 0;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
