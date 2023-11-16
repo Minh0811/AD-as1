@@ -34,6 +34,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, int position) {
         Exercise exercise = exercises.get(position);
         holder.textViewExerciseName.setText(exercise.getName());
+
+        holder.textViewDescription.setText(exercise.getDescription());
     }
 
     @Override
@@ -43,10 +45,12 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewExerciseName;
+        TextView textViewDescription;
 
         public ViewHolder(View itemView) {
             super(itemView);
             textViewExerciseName = itemView.findViewById(R.id.textViewExerciseName);
+            textViewDescription = itemView.findViewById(R.id.textViewDescription);
         }
     }
 }
