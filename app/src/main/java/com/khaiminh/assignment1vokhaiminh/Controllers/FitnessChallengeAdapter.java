@@ -48,4 +48,9 @@ public class FitnessChallengeAdapter extends RecyclerView.Adapter<FitnessChallen
             textViewChallengeDescription = itemView.findViewById(R.id.textViewChallengeDescription);
         }
     }
+
+    public void updateFitnessChallenges(List<FitnessChallenge> newChallenges) {
+        fitnessChallenges = newChallenges;
+        notifyDataSetChanged();
+    }
 }
