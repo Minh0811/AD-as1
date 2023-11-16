@@ -5,13 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -66,39 +62,7 @@ public class ExerciseScreenActivity extends AppCompatActivity {
         viewPagerImageSlider = findViewById(R.id.viewPagerImageSlider);
         sliderAdapter = new ImageSliderAdapter(this, filteredExercises);
         viewPagerImageSlider.setAdapter(sliderAdapter);
-
-        WebView webView = findViewById(R.id.webview);
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
-
-        if (!filteredExercises.isEmpty()) {
-            String videoUrl = filteredExercises.get(0).getVideoUrl(); // Get the video URL of the first exercise
-            String videoId = extractYoutubeVideoId(videoUrl); // Implement this method to extract the video ID
-            String frameVideo = "<html><body><iframe width=\"match_parent\" height=\"wrap_content\" src=\"https://www.youtube.com/embed/" + videoId + "\" frameborder=\"0\" allowfullscreen></iframe></body></html>";
-            webView.loadData(frameVideo, "text/html", "utf-8");
-        }
     }
-    private String extractYoutubeVideoId(String videoUrl) {
-        // This assumes the URL format is "http://www.youtube.com/watch?v=VIDEO_ID"
-        String videoId = "";
-
-        if (videoUrl != null && videoUrl.trim().length() > 0) {
-            String query = Uri.parse(videoUrl).getQuery();
-            if (query != null) {
-                String[] params = query.split("&");
-                for (String param : params) {
-                    if (param.startsWith("v=")) {
-                        videoId = param.split("=")[1];
-                        break;
-                    }
-                }
-            }
-        }
-
-        return videoId;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
