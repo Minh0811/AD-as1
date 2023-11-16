@@ -1,19 +1,23 @@
 package com.khaiminh.assignment1vokhaiminh.Models;
 
-//Fields might include id, name, description, videoUrl, fitnessChallengeId
+import java.util.List;
+
 public class Exercise {
     private int id;
     private String name;
     private String description;
     private String videoUrl;
     private int fitnessChallengeId;
+    private List<String> imageNames; // List of image names
 
-    public Exercise(int id, String name, String description, String videoUrl, int fitnessChallengeId) {
+    // Constructor
+    public Exercise(int id, String name, String description, String videoUrl, int fitnessChallengeId, List<String> imageNames) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.videoUrl = videoUrl;
         this.fitnessChallengeId = fitnessChallengeId;
+        this.imageNames = imageNames; // Initialize the list of image names
     }
 
     // Getters and setters
@@ -32,6 +36,9 @@ public class Exercise {
     public int getFitnessChallengeId() {
         return fitnessChallengeId;
     }
+    public List<String> getImageNames() { // Getter for the list of image names
+        return imageNames;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -47,5 +54,8 @@ public class Exercise {
     }
     public void setFitnessChallengeId(int fitnessChallengeId) {
         this.fitnessChallengeId = fitnessChallengeId;
+    }
+    public void setImageNames(List<String> imageNames) { // Setter for the list of image names
+        this.imageNames = imageNames;
     }
 }

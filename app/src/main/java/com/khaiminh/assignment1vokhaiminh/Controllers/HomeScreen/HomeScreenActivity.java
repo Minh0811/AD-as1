@@ -1,22 +1,19 @@
-package com.khaiminh.assignment1vokhaiminh.Controllers;
+package com.khaiminh.assignment1vokhaiminh.Controllers.HomeScreen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import java.lang.reflect.Type;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.khaiminh.assignment1vokhaiminh.Controllers.ExerciseScreen.ExerciseScreenActivity;
 import com.khaiminh.assignment1vokhaiminh.Models.FitnessChallenge;
-import com.khaiminh.assignment1vokhaiminh.Controllers.FitnessChallengeAdapter;
 import com.khaiminh.assignment1vokhaiminh.R;
+import com.khaiminh.assignment1vokhaiminh.Utils.JsonUtils;
 
 
 public class HomeScreenActivity extends AppCompatActivity {
@@ -35,11 +32,20 @@ public class HomeScreenActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewFitnessChallenges);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        String json = loadJSONFromAsset();
-        fitnessChallenges = parseFitnessChallenges(json);
+        // Use JsonUtils to load and parse the JSON
+        String json = JsonUtils.loadJSONFromAsset(this, "fitness_challenges.json");
+        fitnessChallenges = JsonUtils.parseFitnessChallenges(json);
         filteredChallenges = new ArrayList<>(fitnessChallenges);
+        FitnessChallengeAdapter.OnItemClickListener itemClickListener = new FitnessChallengeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int fitnessChallengeId) {
+                Intent intent = new Intent(HomeScreenActivity.this, ExerciseScreenActivity.class);
+                intent.putExtra("fitnessChallengeId", fitnessChallengeId);
+                startActivity(intent);
+            }
+        };
 
-        adapter = new FitnessChallengeAdapter(filteredChallenges);
+        adapter = new FitnessChallengeAdapter(fitnessChallenges, itemClickListener);
         recyclerView.setAdapter(adapter);
 
         searchView = findViewById(R.id.searchView);
@@ -57,6 +63,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         });
     }
 
+
     private void filterChallenges(String text) {
         List<FitnessChallenge> filteredList = new ArrayList<>();
         if (text.isEmpty()) {
@@ -70,28 +77,4 @@ public class HomeScreenActivity extends AppCompatActivity {
         }
         adapter.updateFitnessChallenges(filteredList);
     }
-
-
-
-    private String loadJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream is = getAssets().open("fitness_challenges.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
-    }
-    private List<FitnessChallenge> parseFitnessChallenges(String json) {
-        Gson gson = new Gson();
-        Type type = new TypeToken<List<FitnessChallenge>>(){}.getType();
-        return gson.fromJson(json, type);
-    }
-
 }

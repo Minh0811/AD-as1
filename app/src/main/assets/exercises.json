@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Morning Yoga Stretch",
+    "description": "A gentle yoga routine to start your day.",
+    "videoUrl": "https://example.com/yoga-stretch-video",
+    "fitnessChallengeId": 1,
+    "imageNames": ["yoga_stretch_1.jpg", "yoga_stretch_2.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "5K Run Training",
+    "description": "Interval training for improving your 5K run time.",
+    "videoUrl": "https://example.com/5k-run-video",
+    "fitnessChallengeId": 2,
+    "imageNames": ["5k_run_1.jpg", "5k_run_2.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "HIIT Cardio Blast",
+    "description": "High-intensity interval training for a quick cardio workout.",
+    "videoUrl": "https://example.com/hiit-cardio-video",
+    "fitnessChallengeId": 3,
+    "imageNames": ["hiit_cardio_1.jpg", "hiit_cardio_2.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Beginner's Pilates",
+    "description": "Pilates exercises for beginners to improve flexibility and strength.",
+    "videoUrl": "https://example.com/beginners-pilates-video",
+    "fitnessChallengeId": 4,
+    "imageNames": ["beginners_pilates_1.jpg", "beginners_pilates_2.jpg"]
+  },
+  {
+    "id": 5,
+    "name": "Advanced Core Workout",
+    "description": "Challenging exercises to strengthen your core muscles.",
+    "videoUrl": "https://example.com/advanced-core-video",
+    "fitnessChallengeId": 5,
+    "imageNames": ["advanced_core_1.jpg", "advanced_core_2.jpg"]
+  },
+  {
+    "id": 6,
+    "name": "Meditation for Relaxation",
+    "description": "Guided meditation to help you relax and reduce stress.",
+    "videoUrl": "https://example.com/meditation-video",
+    "fitnessChallengeId": 6,
+    "imageNames": ["meditation_relaxation_1.jpg", "meditation_relaxation_2.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "Full Body Strength Training",
+    "description": "A strength training routine for the entire body.",
+    "videoUrl": "https://example.com/full-body-strength-video",
+    "fitnessChallengeId": 7,
+    "imageNames": ["full_body_strength_1.jpg", "full_body_strength_2.jpg"]
+  },
+  {
+    "id": 8,
+    "name": "Cycling Endurance Workout",
+    "description": "Cycling exercises to build endurance and stamina.",
+    "videoUrl": "https://example.com/cycling-endurance-video",
+    "fitnessChallengeId": 8,
+    "imageNames": ["cycling_endurance_1.jpg", "cycling_endurance_2.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Swimming Technique Drills",
+    "description": "Drills to improve your swimming technique and speed.",
+    "videoUrl": "https://example.com/swimming-technique-video",
+    "fitnessChallengeId": 9,
+    "imageNames": ["swimming_technique_1.jpg", "swimming_technique_2.jpg"]
+  },
+  {
+    "id": 10,
+    "name": "Yoga for Flexibility",
+    "description": "Yoga poses specifically for increasing flexibility.",
+    "videoUrl": "https://example.com/yoga-flexibility-video",
+    "fitnessChallengeId": 10,
+    "imageNames": ["yoga_flexibility_1.jpg", "yoga_flexibility_2.jpg"]
+  }
+]
