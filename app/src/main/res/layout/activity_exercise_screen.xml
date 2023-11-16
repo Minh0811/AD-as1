@@ -5,7 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:elevation="4dp">
+        <!-- You can add title or other items here if needed -->
+    </androidx.appcompat.widget.Toolbar>
     <!-- Image Slider -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerImageSlider"

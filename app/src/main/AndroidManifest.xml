@@ -12,14 +12,12 @@
         android:theme="@style/Theme.Assignment1Vokhaiminh"
         tools:targetApi="31" >
 
-        <activity
-            android:name=".Controllers.ExerciseScreen.ExerciseScreenActivity"
-            android:exported="false"
+        <activity android:name=".Controllers.ExerciseScreen.ExerciseScreenActivity"
             android:parentActivityName=".Controllers.HomeScreen.HomeScreenActivity">
-            <!-- Parent activity meta-data to support API level 7+ -->
+            <!-- Meta-data tag for supporting API level 16 and below -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.khaiminh.assignment1vokhaiminh.Controllers.HomeScreen.HomeScreenActivity" />
+                android:value=".Controllers.HomeScreen.HomeScreenActivity" />
         </activity>
 
         <activity
