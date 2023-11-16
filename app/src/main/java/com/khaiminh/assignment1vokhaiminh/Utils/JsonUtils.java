@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.khaiminh.assignment1vokhaiminh.Models.Exercise;
 import com.khaiminh.assignment1vokhaiminh.Models.FitnessChallenge;
 
 import java.io.IOException;
@@ -35,4 +36,10 @@ public class JsonUtils {
         Type type = new TypeToken<List<FitnessChallenge>>(){}.getType();
         return gson.fromJson(json, type);
     }
+    public static List<Exercise> parseExercises(String json) {
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<Exercise>>(){}.getType();
+        return gson.fromJson(json, type);
+    }
+
 }

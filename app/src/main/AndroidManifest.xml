@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" >
 
@@ -12,9 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1Vokhaiminh"
         tools:targetApi="31" >
+
         <activity
             android:name=".Controllers.ExerciseScreen.ExerciseScreenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Controllers.HomeScreen.HomeScreenActivity">
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.khaiminh.assignment1vokhaiminh.Controllers.HomeScreen.HomeScreenActivity" />
+        </activity>
+
         <activity
             android:name=".Controllers.HomeScreen.HomeScreenActivity"
             android:exported="true"
@@ -22,7 +29,6 @@
             android:theme="@style/Theme.Assignment1Vokhaiminh" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
