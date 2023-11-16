@@ -34,13 +34,6 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, int position) {
         Exercise exercise = exercises.get(position);
         holder.textViewExerciseName.setText(exercise.getName());
-
-        // Set the image
-        if (!exercise.getImageNames().isEmpty()) {
-            String imageName = exercise.getImageNames().get(0); // Assuming you want the first image
-            @DrawableRes int imageResId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
-            holder.imageViewExercise.setImageResource(imageResId);
-        }
     }
 
     @Override
@@ -50,12 +43,10 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewExerciseName;
-        public ImageView imageViewExercise;
 
         public ViewHolder(View itemView) {
             super(itemView);
             textViewExerciseName = itemView.findViewById(R.id.textViewExerciseName);
-            imageViewExercise = itemView.findViewById(R.id.imageViewExercise); // Make sure you have this ImageView in your item layout
         }
     }
 }
