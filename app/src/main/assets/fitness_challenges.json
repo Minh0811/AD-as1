@@ -5,7 +5,7 @@
     "description": "A comprehensive yoga program for mind and body wellness.",
     "duration": 30,
     "challengeType": "Yoga",
-    "image": "yoga_journey"
+    "imageName": "yoga_journey"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "A running plan designed to get you to a 10K finish line in 8 weeks.",
     "duration": 56,
     "challengeType": "Running",
-    "image": "swimming_skills"
+    "imageName": "swimming_skills"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "A high-intensity, bodyweight-only workout challenge.",
     "duration": 30,
     "challengeType": "Strength",
-    "image": "yoga_journey"
+    "imageName": "yoga_journey"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Improve mindfulness and reduce stress with daily guided meditations.",
     "duration": 21,
     "challengeType": "Meditation",
-    "image": "swimming_skills"
+    "imageName": "swimming_skills"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "A gentle introduction to Pilates for core strength and flexibility.",
     "duration": 30,
     "challengeType": "Pilates",
-    "image": "yoga_journey"
+    "imageName": "yoga_journey"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "High-Intensity Interval Training for a full-body workout.",
     "duration": 30,
     "challengeType": "HIIT",
-    "image": "yoga_journey"
+    "imageName": "yoga_journey"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Build stamina and endurance with this cycling program.",
     "duration": 45,
     "challengeType": "Cycling",
-    "image": "yoga_journey"
+    "imageName": "yoga_journey"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Enhance your swimming technique and speed.",
     "duration": 30,
     "challengeType": "Swimming",
-    "image": "swimming_skills"
+    "imageName": "swimming_skills"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "A foundational program to start strength training.",
     "duration": 30,
     "challengeType": "Strength",
-    "image": "swimming_skills"
+    "imageName": "swimming_skills"
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "description": "A challenging program focused on core strength and stability.",
     "duration": 30,
     "challengeType": "Core",
-    "image": "yoga_journey"
+    "imageName": "yoga_journey"
   }
 ]

@@ -93,5 +93,8 @@ public class HomeScreenActivity extends AppCompatActivity {
         Type type = new TypeToken<List<FitnessChallenge>>(){}.getType();
         return gson.fromJson(json, type);
     }
+    private int getImageResId(String imageName) {
+        return getResources().getIdentifier(imageName, "drawable", getPackageName());
+    }
 
 }
