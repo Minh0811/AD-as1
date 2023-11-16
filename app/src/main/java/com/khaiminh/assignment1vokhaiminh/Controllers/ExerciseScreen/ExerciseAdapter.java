@@ -1,9 +1,13 @@
 package com.khaiminh.assignment1vokhaiminh.Controllers.ExerciseScreen;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.DrawableRes;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.khaiminh.assignment1vokhaiminh.Models.Exercise;
@@ -13,9 +17,11 @@ import java.util.List;
 public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHolder> {
 
     private List<Exercise> exercises;
+    private Context context;
 
-    public ExerciseAdapter(List<Exercise> exercises) {
+    public ExerciseAdapter(List<Exercise> exercises, Context context) {
         this.exercises = exercises;
+        this.context = context;
     }
 
     @Override
@@ -28,7 +34,13 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, int position) {
         Exercise exercise = exercises.get(position);
         holder.textViewExerciseName.setText(exercise.getName());
-        // Set other views in the holder as needed
+
+        // Set the image
+        if (!exercise.getImageNames().isEmpty()) {
+            String imageName = exercise.getImageNames().get(0); // Assuming you want the first image
+            @DrawableRes int imageResId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
+            holder.imageViewExercise.setImageResource(imageResId);
+        }
     }
 
     @Override
@@ -38,12 +50,12 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewExerciseName;
-        // Other views
+        public ImageView imageViewExercise;
 
         public ViewHolder(View itemView) {
             super(itemView);
             textViewExerciseName = itemView.findViewById(R.id.textViewExerciseName);
-            // Initialize other views
+            imageViewExercise = itemView.findViewById(R.id.imageViewExercise); // Make sure you have this ImageView in your item layout
         }
     }
 }

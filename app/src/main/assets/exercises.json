@@ -5,7 +5,7 @@
     "description": "A gentle yoga routine to start your day.",
     "videoUrl": "https://example.com/yoga-stretch-video",
     "fitnessChallengeId": 1,
-    "imageNames": ["swimming_skills.png", "yoga_journey.png"]
+    "imageNames": ["swimming_skills", "yoga_journey"]
   },
   {
     "id": 2,

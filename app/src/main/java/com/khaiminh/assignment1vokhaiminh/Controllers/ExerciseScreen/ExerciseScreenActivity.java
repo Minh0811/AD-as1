@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.khaiminh.assignment1vokhaiminh.Models.Exercise;
 import com.khaiminh.assignment1vokhaiminh.R;
@@ -20,6 +21,8 @@ import java.util.List;
 public class ExerciseScreenActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ExerciseAdapter adapter;
+    private ViewPager2 viewPagerImageSlider;
+    private ImageSliderAdapter sliderAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +55,13 @@ public class ExerciseScreenActivity extends AppCompatActivity {
 
         // Initialize RecyclerView and Adapter
         recyclerView = findViewById(R.id.recyclerViewExercises);
-        adapter = new ExerciseAdapter(filteredExercises);
+        adapter = new ExerciseAdapter(filteredExercises, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        // Initialize ViewPager2 and Adapter
+        viewPagerImageSlider = findViewById(R.id.viewPagerImageSlider);
+        sliderAdapter = new ImageSliderAdapter(this, filteredExercises);
+        viewPagerImageSlider.setAdapter(sliderAdapter);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

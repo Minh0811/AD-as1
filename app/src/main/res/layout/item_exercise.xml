@@ -1,10 +1,10 @@
-<!-- Example layout for individual exercise items -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="16dp">
 
+    <!-- TextView for Exercise Name -->
     <TextView
         android:id="@+id/textViewExerciseName"
         android:layout_width="0dp"
@@ -12,5 +12,14 @@
         android:layout_weight="1"
         android:textSize="16sp"
         android:textStyle="bold"/>
+
+    <!-- ImageView for Exercise Image -->
+    <ImageView
+        android:id="@+id/imageViewExercise"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_launcher_foreground" /> <!-- Placeholder image -->
+
     <!-- Add more views as needed -->
 </LinearLayout>
