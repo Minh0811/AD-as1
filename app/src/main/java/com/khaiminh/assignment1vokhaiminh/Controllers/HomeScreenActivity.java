@@ -1,4 +1,4 @@
-package com.khaiminh.assignment1vokhaiminh;
+package com.khaiminh.assignment1vokhaiminh.Controllers;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -6,11 +6,13 @@ import java.lang.reflect.Type;
 import java.io.IOException;
 import java.io.InputStream;
 import com.khaiminh.assignment1vokhaiminh.Models.FitnessChallenge;
+import com.khaiminh.assignment1vokhaiminh.R;
+
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import java.util.ArrayList; // Import ArrayList
+
 import java.util.List;
 
 public class HomeScreenActivity extends AppCompatActivity {

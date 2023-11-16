@@ -1,5 +1,7 @@
-package com.khaiminh.assignment1vokhaiminh;
+package com.khaiminh.assignment1vokhaiminh.Controllers;
 import com.khaiminh.assignment1vokhaiminh.Models.FitnessChallenge;
+import com.khaiminh.assignment1vokhaiminh.R;
+
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
