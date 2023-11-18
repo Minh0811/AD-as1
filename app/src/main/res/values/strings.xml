@@ -46,4 +46,11 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string-array name="sorting_options">
+        <item>No Sorting</item>
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+
+    <string name="filter_label">Difficulty Filter:</string>
 </resources>

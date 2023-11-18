@@ -2,12 +2,17 @@ package com.khaiminh.assignment1vokhaiminh.Controllers.HomeScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Spinner;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.khaiminh.assignment1vokhaiminh.Controllers.ExerciseScreen.ExerciseScreenActivity;
@@ -23,11 +28,17 @@ public class HomeScreenActivity extends AppCompatActivity {
     private List<FitnessChallenge> fitnessChallenges;
     private List<FitnessChallenge> filteredChallenges;
     private SearchView searchView;
+    private Spinner sortingSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        SearchView searchView = findViewById(R.id.searchView);
+        searchView.setIconifiedByDefault(false); // This will expand the SearchView
+        searchView.setQueryHint("Search here..."); // Optional: Set a hint for the search input
+
 
         recyclerView = findViewById(R.id.recyclerViewFitnessChallenges);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -61,6 +72,25 @@ public class HomeScreenActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        sortingSpinner = findViewById(R.id.sortingSpinner);
+        sortingSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    // No Sorting
+                    adapter.updateFitnessChallenges(fitnessChallenges);
+                } else {
+                    // Sort based on the selected option
+                    sortFitnessChallenges(position == 1); // 1 for Ascending, 2 for Descending
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // This method is required but can be left empty
+            }
+        });
     }
 
 
@@ -76,5 +106,14 @@ public class HomeScreenActivity extends AppCompatActivity {
             }
         }
         adapter.updateFitnessChallenges(filteredList);
+    }
+
+    private void sortFitnessChallenges(boolean ascending) {
+        if (ascending) {
+            Collections.sort(filteredChallenges, (o1, o2) -> Integer.compare(o1.getDifficulty(), o2.getDifficulty()));
+        } else {
+            Collections.sort(filteredChallenges, (o1, o2) -> Integer.compare(o2.getDifficulty(), o1.getDifficulty()));
+        }
+        adapter.updateFitnessChallenges(filteredChallenges);
     }
 }
