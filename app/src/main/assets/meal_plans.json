@@ -3,6 +3,7 @@
     "id": 1,
     "name": "Balanced Diet Plan",
     "description": "A well-rounded meal plan focusing on all essential nutrients.",
+    "imageName": "yoga_journey",
     "calories": 2000,
     "protein": 50,
     "carbs": 300,

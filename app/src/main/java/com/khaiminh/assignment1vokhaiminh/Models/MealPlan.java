@@ -4,6 +4,7 @@ public class MealPlan {
     private int id;
     private String name;
     private String description;
+    private String imageName;
     private int calories;
     private int protein;
     private int carbs;
@@ -12,10 +13,11 @@ public class MealPlan {
     private float maxBmi;
 
     // Constructor
-    public MealPlan(int id, String name, String description, int calories, int protein, int carbs, int fats, float minBmi, float maxBmi) {
+    public MealPlan(int id, String name, String description, String imageName,  int calories, int protein, int carbs, int fats, float minBmi, float maxBmi) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.imageName = imageName;
         this.calories = calories;
         this.protein = protein;
         this.carbs = carbs;
@@ -35,6 +37,9 @@ public class MealPlan {
 
     public String getDescription() {
         return description;
+    }
+    public String getImageName() {
+        return imageName;
     }
 
     public int getCalories() {
@@ -72,6 +77,9 @@ public class MealPlan {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 
     public void setCalories(int calories) {

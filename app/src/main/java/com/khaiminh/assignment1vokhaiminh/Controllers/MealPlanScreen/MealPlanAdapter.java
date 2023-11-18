@@ -3,6 +3,7 @@ package com.khaiminh.assignment1vokhaiminh.Controllers.MealPlanScreen;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +31,9 @@ public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.MealPl
         MealPlan mealPlan = mealPlanList.get(position);
         holder.textViewMealPlanName.setText(mealPlan.getName());
         holder.textViewMealPlanDescription.setText(mealPlan.getDescription());
+        int imageResId = holder.itemView.getContext().getResources().getIdentifier(
+                mealPlan.getImageName(), "drawable", holder.itemView.getContext().getPackageName());
+        holder.imageViewMealPlan.setImageResource(imageResId);
         // Set other fields as needed
     }
 
@@ -41,12 +45,14 @@ public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.MealPl
     static class MealPlanViewHolder extends RecyclerView.ViewHolder {
         TextView textViewMealPlanName;
         TextView textViewMealPlanDescription;
+        ImageView imageViewMealPlan;
         // Other views
 
         public MealPlanViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewMealPlanName = itemView.findViewById(R.id.textViewMealPlanName);
             textViewMealPlanDescription = itemView.findViewById(R.id.textViewMealPlanDescription);
+            imageViewMealPlan = itemView.findViewById(R.id.imageViewMealPlan);
             // Initialize other views
         }
     }
