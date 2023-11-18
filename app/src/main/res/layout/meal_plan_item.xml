@@ -2,9 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="16dp">
 
+    <ImageView
+        android:id="@+id/imageViewMealPlan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
     <TextView
         android:id="@+id/textViewMealPlanName"
         android:layout_width="wrap_content"
@@ -19,7 +30,7 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:text="Description" />
-
+    </LinearLayout>
     <!-- Add more views as needed, such as TextViews for calories, protein, etc. -->
 
 </LinearLayout>
