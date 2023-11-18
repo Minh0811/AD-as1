@@ -72,7 +72,6 @@ public class ExerciseScreenActivity extends AppCompatActivity {
         adapter = new ExerciseAdapter(filteredExercises, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         // Initialize ViewPager2 and Adapter
         viewPagerImageSlider = findViewById(R.id.viewPagerImageSlider);
         sliderAdapter = new ImageSliderAdapter(this, filteredExercises);

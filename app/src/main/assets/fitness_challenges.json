@@ -6,14 +6,14 @@
     "duration": 30,
     "challengeType": "Yoga",
     "imageName": "yoga_journey",
-    "difficulty": 4
+    "difficulty": 1
   },
   {
     "id": 2,
     "name": "10K Running Plan",
     "description": "A running plan designed to get you to a 10K finish line in 8 weeks.",
     "duration": 56,
-    "challengeType": "Running",
+    "challengeType": "e_10k_run",
     "imageName": "swimming_skills",
     "difficulty": 3
   },
@@ -23,7 +23,7 @@
     "description": "A high-intensity, bodyweight-only workout challenge.",
     "duration": 30,
     "challengeType": "Strength",
-    "imageName": "yoga_journey",
+    "imageName": "e_bdy",
     "difficulty": 2
   },
   {
@@ -32,8 +32,8 @@
     "description": "Improve mindfulness and reduce stress with daily guided meditations.",
     "duration": 21,
     "challengeType": "Meditation",
-    "imageName": "swimming_skills",
-    "difficulty": 3
+    "imageName": "e_Meditation",
+    "difficulty": 1
   },
   {
     "id": 5,
@@ -41,7 +41,7 @@
     "description": "A gentle introduction to Pilates for core strength and flexibility.",
     "duration": 30,
     "challengeType": "Pilates",
-    "imageName": "yoga_journey",
+    "imageName": "e_Pilates",
     "difficulty": 3
   },
   {
@@ -50,7 +50,7 @@
     "description": "High-Intensity Interval Training for a full-body workout.",
     "duration": 30,
     "challengeType": "HIIT",
-    "imageName": "yoga_journey",
+    "imageName": "e_HIIT",
     "difficulty": 3
   },
   {
@@ -59,7 +59,7 @@
     "description": "Build stamina and endurance with this cycling program.",
     "duration": 45,
     "challengeType": "Cycling",
-    "imageName": "yoga_journey",
+    "imageName": "e_Cycling",
     "difficulty": 2
   },
   {
@@ -77,7 +77,7 @@
     "description": "A foundational program to start strength training.",
     "duration": 30,
     "challengeType": "Strength",
-    "imageName": "swimming_skills",
+    "imageName": "e_Strength",
     "difficulty": 2
   },
   {
@@ -86,7 +86,7 @@
     "description": "A challenging program focused on core strength and stability.",
     "duration": 30,
     "challengeType": "Core",
-    "imageName": "yoga_journey",
+    "imageName": "e_Core",
     "difficulty": 5
   }
 ]
