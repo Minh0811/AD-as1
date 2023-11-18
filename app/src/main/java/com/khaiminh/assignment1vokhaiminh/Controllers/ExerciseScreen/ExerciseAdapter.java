@@ -73,6 +73,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
             super(itemView);
             textViewExerciseName = itemView.findViewById(R.id.textViewExerciseName);
             textViewDescription = itemView.findViewById(R.id.textViewDescription);
+            textViewDescription1 = itemView.findViewById(R.id.textViewDescription1);
+            textViewDescription2 = itemView.findViewById(R.id.textViewDescription2);
             texViewTips = itemView.findViewById(R.id.textViewTips);
             webViewExercise = itemView.findViewById(R.id.webview);
         }
