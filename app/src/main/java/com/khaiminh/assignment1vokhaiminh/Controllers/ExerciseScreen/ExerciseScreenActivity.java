@@ -8,9 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.khaiminh.assignment1vokhaiminh.Controllers.MealPlanScreen.MealPlanActivity;
 import com.khaiminh.assignment1vokhaiminh.Models.Exercise;
 import com.khaiminh.assignment1vokhaiminh.R;
 import com.khaiminh.assignment1vokhaiminh.Utils.JsonUtils;
@@ -27,16 +32,25 @@ public class ExerciseScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_screen);
+
+        ImageButton btnBackToHome = findViewById(R.id.btnBackToHome);
+        btnBackToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Finish the current activity
+                finish();
+            }
+        });
         // Set up the toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Exercise");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setTitle("Exercise");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
         // Enable the back button in the ActionBar
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        }
         // Get the Intent that started this activity and extract the fitnessChallengeId
         Intent intent = getIntent();
         int fitnessChallengeId = intent.getIntExtra("fitnessChallengeId", -1);
@@ -58,10 +72,21 @@ public class ExerciseScreenActivity extends AppCompatActivity {
         adapter = new ExerciseAdapter(filteredExercises, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         // Initialize ViewPager2 and Adapter
         viewPagerImageSlider = findViewById(R.id.viewPagerImageSlider);
         sliderAdapter = new ImageSliderAdapter(this, filteredExercises);
         viewPagerImageSlider.setAdapter(sliderAdapter);
+
+        // Button to go to Meal Plan
+        Button btnToMealPlan = findViewById(R.id.btnToMealPlan);
+        btnToMealPlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ExerciseScreenActivity.this, MealPlanActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
