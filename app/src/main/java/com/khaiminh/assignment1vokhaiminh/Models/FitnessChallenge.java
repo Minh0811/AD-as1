@@ -7,15 +7,17 @@ public class FitnessChallenge {
     private int duration; // in days
     private String challengeType;
     private String imageName;
+    private int difficulty;
 
     // Constructor
-    public FitnessChallenge(int id, String name, String description, int duration, String challengeType, String imageName) {
+    public FitnessChallenge(int id, String name, String description, int duration, String challengeType, String imageName, int difficulty) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.duration = duration;
         this.challengeType = challengeType;
         this.imageName = imageName;
+        this.difficulty = difficulty;
     }
 
     // Getters and setters
@@ -37,6 +39,9 @@ public class FitnessChallenge {
     public String getImageName() {
         return imageName;
     }
+    public int getDifficulty() {
+        return difficulty;
+    }
 
 
     public void setId(int id) {
@@ -56,5 +61,8 @@ public class FitnessChallenge {
     }
     public void setImageName(String imageName) {
         this.imageName = imageName;
+    }
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
     }
 }

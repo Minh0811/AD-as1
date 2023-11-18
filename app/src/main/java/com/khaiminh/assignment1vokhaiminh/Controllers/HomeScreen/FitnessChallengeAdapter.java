@@ -55,8 +55,16 @@ public class FitnessChallengeAdapter extends RecyclerView.Adapter<FitnessChallen
                 listener.onItemClick(challenge.getId());
             }
         });
+        String difficultyStars = generateStars(challenge.getDifficulty());
+        holder.textViewChallengeDifficulty.setText("Difficulty: " + difficultyStars);
     }
-
+    private String generateStars(int difficulty) {
+        StringBuilder stars = new StringBuilder();
+        for (int i = 0; i < difficulty; i++) {
+            stars.append("⭐ "); // Star character
+        }
+        return stars.toString();
+    }
 
 
 
@@ -69,13 +77,14 @@ public class FitnessChallengeAdapter extends RecyclerView.Adapter<FitnessChallen
         public TextView textViewChallengeName;
         public TextView textViewChallengeDescription;
         public ImageView imageViewChallenge;
+        public TextView textViewChallengeDifficulty;
 
         public ViewHolder(View itemView, final FitnessChallenge challenge, final OnItemClickListener listener) {
             super(itemView);
             textViewChallengeName = itemView.findViewById(R.id.textViewChallengeName);
             textViewChallengeDescription = itemView.findViewById(R.id.textViewChallengeDescription);
             imageViewChallenge = itemView.findViewById(R.id.imageViewChallenge);
-
+            textViewChallengeDifficulty = itemView.findViewById(R.id.textViewChallengeDifficulty);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
