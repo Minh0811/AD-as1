@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.khaiminh.assignment1vokhaiminh.Models.Exercise;
 import com.khaiminh.assignment1vokhaiminh.Models.FitnessChallenge;
+import com.khaiminh.assignment1vokhaiminh.Models.MealPlan;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,4 +43,9 @@ public class JsonUtils {
         return gson.fromJson(json, type);
     }
 
+    public static List<MealPlan> parseMealPlans(String json) {
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<MealPlan>>(){}.getType();
+        return gson.fromJson(json, type);
+    }
 }
