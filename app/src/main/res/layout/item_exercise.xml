@@ -28,6 +28,24 @@
                 android:layout_height="wrap_content"
                 android:text="Description"
                 android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textViewDescription1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textViewDescription2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textViewTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp" />
             <WebView
                 android:id="@+id/webview"
                 android:layout_width="match_parent"

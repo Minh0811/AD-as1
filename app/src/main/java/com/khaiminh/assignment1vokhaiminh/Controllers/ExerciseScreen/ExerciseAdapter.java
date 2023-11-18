@@ -37,7 +37,9 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
         Exercise exercise = exercises.get(position);
         holder.textViewExerciseName.setText(exercise.getName());
         holder.textViewDescription.setText(exercise.getDescription());
-
+        holder.textViewDescription1.setText(exercise.getDescription1());
+        holder.textViewDescription2.setText(exercise.getDescription2());
+        holder.texViewTips.setText(exercise.getTips());
         String videoUrl = exercise.getVideoUrl();
         if (videoUrl != null && !videoUrl.isEmpty()) {
             holder.webViewExercise.getSettings().setJavaScriptEnabled(true);
@@ -62,12 +64,16 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewExerciseName;
         public TextView textViewDescription;
+        public TextView textViewDescription1;
+        public TextView textViewDescription2;
+        public TextView texViewTips;
         public WebView webViewExercise;
 
         public ViewHolder(View itemView) {
             super(itemView);
             textViewExerciseName = itemView.findViewById(R.id.textViewExerciseName);
             textViewDescription = itemView.findViewById(R.id.textViewDescription);
+            texViewTips = itemView.findViewById(R.id.textViewTips);
             webViewExercise = itemView.findViewById(R.id.webview);
         }
     }

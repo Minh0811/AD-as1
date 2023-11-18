@@ -3,6 +3,9 @@
     "id": 1,
     "name": "Morning Yoga Stretch",
     "description": "A gentle yoga routine to start your day.",
+    "description1": "Ideal for beginners and those looking to ease into their day.",
+    "description2": "Focuses on stretching and mindful breathing.",
+    "tips": "Focus on deep breathing and gentle stretches to awaken your body.",
     "videoUrl": "https://www.youtube.com/watch?v=V2KCAfHjySQ",
     "fitnessChallengeId": 1,
     "imageNames": ["swimming_skills", "yoga_journey"]
@@ -11,6 +14,9 @@
     "id": 2,
     "name": "5K Run Training",
     "description": "Interval training for improving your 5K run time.",
+    "description1": "Designed to enhance running speed and endurance.",
+    "description2": "Includes a mix of short sprints and longer runs.",
+    "tips": "Incorporate interval training and rest days to improve speed and recovery.",
     "videoUrl": "https://www.youtube.com/watch?v=pSDkbU5FGzk",
     "fitnessChallengeId": 2,
     "imageNames": ["yoga_journey", "yoga_journey"]
@@ -19,6 +25,9 @@
     "id": 3,
     "name": "HIIT Cardio Blast",
     "description": "High-intensity interval training for a quick cardio workout.",
+    "description1": "Short bursts of intense exercise followed by brief rest periods.",
+    "description2": "Aims to burn calories and improve heart health.",
+    "tips": "Stay hydrated and maintain proper form during each high-intensity interval.",
     "videoUrl": "https://example.com/hiit-cardio-video",
     "fitnessChallengeId": 3,
     "imageNames": ["hiit_cardio_1.jpg", "hiit_cardio_2.jpg"]
@@ -27,6 +36,9 @@
     "id": 4,
     "name": "Beginner's Pilates",
     "description": "Pilates exercises for beginners to improve flexibility and strength.",
+    "description1": "Focuses on core strength, posture, and flexibility.",
+    "description2": "Ideal for those new to Pilates or looking for a gentle workout.",
+    "tips": "Focus on your core and maintain steady, controlled movements.",
     "videoUrl": "https://example.com/beginners-pilates-video",
     "fitnessChallengeId": 4,
     "imageNames": ["beginners_pilates_1.jpg", "beginners_pilates_2.jpg"]
@@ -35,6 +47,9 @@
     "id": 5,
     "name": "Advanced Core Workout",
     "description": "Challenging exercises to strengthen your core muscles.",
+    "description1": "Targets deep core muscles for improved strength and stability.",
+    "description2": "Recommended for those with prior core training experience.",
+    "tips": "Ensure proper form to avoid strain and maximize core engagement.",
     "videoUrl": "https://example.com/advanced-core-video",
     "fitnessChallengeId": 5,
     "imageNames": ["advanced_core_1.jpg", "advanced_core_2.jpg"]
@@ -43,6 +58,9 @@
     "id": 6,
     "name": "Meditation for Relaxation",
     "description": "Guided meditation to help you relax and reduce stress.",
+    "description1": "Aims to calm the mind and ease anxiety.",
+    "description2": "Suitable for beginners and those seeking stress relief.",
+    "tips": "Create a calm environment and focus on your breath to enhance relaxation.",
     "videoUrl": "https://example.com/meditation-video",
     "fitnessChallengeId": 6,
     "imageNames": ["meditation_relaxation_1.jpg", "meditation_relaxation_2.jpg"]
@@ -51,6 +69,9 @@
     "id": 7,
     "name": "Full Body Strength Training",
     "description": "A strength training routine for the entire body.",
+    "description1": "Incorporates exercises for all major muscle groups.",
+    "description2": "Balances muscle building with overall endurance.",
+    "tips": "Balance your workout across different muscle groups and include rest days.",
     "videoUrl": "https://example.com/full-body-strength-video",
     "fitnessChallengeId": 7,
     "imageNames": ["full_body_strength_1.jpg", "full_body_strength_2.jpg"]
@@ -59,6 +80,9 @@
     "id": 8,
     "name": "Cycling Endurance Workout",
     "description": "Cycling exercises to build endurance and stamina.",
+    "description1": "Focuses on long-distance cycling and stamina building.",
+    "description2": "Ideal for cyclists looking to improve long ride performance.",
+    "tips": "Gradually increase intensity and duration to build endurance effectively.",
     "videoUrl": "https://example.com/cycling-endurance-video",
     "fitnessChallengeId": 8,
     "imageNames": ["cycling_endurance_1.jpg", "cycling_endurance_2.jpg"]
@@ -67,6 +91,9 @@
     "id": 9,
     "name": "Swimming Technique Drills",
     "description": "Drills to improve your swimming technique and speed.",
+    "description1": "Enhances stroke efficiency and aquatic agility.",
+    "description2": "Suitable for swimmers looking to refine their technique.",
+    "tips": "Concentrate on one drill at a time to refine technique and enhance efficiency.",
     "videoUrl": "https://example.com/swimming-technique-video",
     "fitnessChallengeId": 9,
     "imageNames": ["swimming_technique_1.jpg", "swimming_technique_2.jpg"]
@@ -75,6 +102,9 @@
     "id": 10,
     "name": "Yoga for Flexibility",
     "description": "Yoga poses specifically for increasing flexibility.",
+    "description1": "Targets major muscle groups to improve overall flexibility.",
+    "description2": "Great for those looking to enhance their range of motion.",
+    "tips": "Maintain a regular practice and be patient with your body's flexibility progress.",
     "videoUrl": "https://example.com/yoga-flexibility-video",
     "fitnessChallengeId": 10,
     "imageNames": ["yoga_flexibility_1.jpg", "yoga_flexibility_2.jpg"]
