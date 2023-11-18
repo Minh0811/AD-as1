@@ -14,7 +14,7 @@
     "description": "A running plan designed to get you to a 10K finish line in 8 weeks.",
     "duration": 56,
     "challengeType": "e_10k_run",
-    "imageName": "swimming_skills",
+    "imageName": "e_10k_run1",
     "difficulty": 3
   },
   {
@@ -32,7 +32,7 @@
     "description": "Improve mindfulness and reduce stress with daily guided meditations.",
     "duration": 21,
     "challengeType": "Meditation",
-    "imageName": "e_Meditation",
+    "imageName": "e_meditation",
     "difficulty": 1
   },
   {
@@ -41,7 +41,7 @@
     "description": "A gentle introduction to Pilates for core strength and flexibility.",
     "duration": 30,
     "challengeType": "Pilates",
-    "imageName": "e_Pilates",
+    "imageName": "e_pilates",
     "difficulty": 3
   },
   {
@@ -50,7 +50,7 @@
     "description": "High-Intensity Interval Training for a full-body workout.",
     "duration": 30,
     "challengeType": "HIIT",
-    "imageName": "e_HIIT",
+    "imageName": "e_hiit",
     "difficulty": 3
   },
   {
@@ -59,7 +59,7 @@
     "description": "Build stamina and endurance with this cycling program.",
     "duration": 45,
     "challengeType": "Cycling",
-    "imageName": "e_Cycling",
+    "imageName": "e_cycling",
     "difficulty": 2
   },
   {
@@ -77,7 +77,7 @@
     "description": "A foundational program to start strength training.",
     "duration": 30,
     "challengeType": "Strength",
-    "imageName": "e_Strength",
+    "imageName": "e_strength",
     "difficulty": 2
   },
   {
@@ -86,7 +86,7 @@
     "description": "A challenging program focused on core strength and stability.",
     "duration": 30,
     "challengeType": "Core",
-    "imageName": "e_Core",
+    "imageName": "e_core",
     "difficulty": 5
   }
 ]

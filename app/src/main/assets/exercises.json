@@ -6,7 +6,7 @@
     "description1": "Diverse yoga styles for an engaging practice.",
     "description2": "Suitable for all levels to deepen yoga skills.",
     "tips": "Vary yoga styles for balance and engagement.",
-    "videoUrl": "https://www.youtube.com/watch?v=V2KCAfHjySQ",
+    "videoUrl": "https://www.youtube.com/watch?v=Eml2xnoLpYE&pp=ygUOaG93IHRvIGRvIHlvZ2E%3D",
     "fitnessChallengeId": 1,
     "imageNames": ["e_yoga1", "e_yoga2"]
   },
@@ -17,7 +17,7 @@
     "description1": "Interval and long-distance runs for endurance.",
     "description2": "Ideal for beginners and intermediate runners.",
     "tips": "Increase distance weekly with proper rest.",
-    "videoUrl": "https://www.youtube.com/watch?v=pSDkbU5FGzk",
+    "videoUrl": "https://www.youtube.com/watch?v=_kGESn8ArrU&pp=ygUKaG93IHRvIFJVTg%3D%3D",
     "fitnessChallengeId": 2,
     "imageNames": ["e_10k_run1", "e_10k_run2"]
   },
@@ -28,7 +28,7 @@
     "description1": "Full-body workout with push-ups, squats, lunges.",
     "description2": "Improves muscle tone and cardiovascular health.",
     "tips": "TIPS: Stay hydrated and focus on form.",
-    "videoUrl": "https://example.com/hiit-cardio-video",
+    "videoUrl": "https://www.youtube.com/watch?v=30PqX2zvK88&pp=ygUSaG93IHRvIEJPRFkgV0VJR0hU",
     "fitnessChallengeId": 3,
     "imageNames": ["e_bdy1", "e_bdy2"]
   },
@@ -39,9 +39,9 @@
     "description1": "Guided sessions for consistent meditation routine.",
     "description2": "Focus on various techniques for mental clarity.",
     "tips": "TIPS: Daily quiet time for deep, mindful breathing.",
-    "videoUrl": "https://example.com/beginners-pilates-video",
+    "videoUrl": "https://www.youtube.com/watch?v=thcEuMDWxoI&pp=ygURaG93IHRvIE1lZGl0YXRpb24%3D",
     "fitnessChallengeId": 4,
-    "imageNames": ["e_Meditation1", "e_Meditation2"]
+    "imageNames": ["e_meditation1", "e_meditation2"]
   },
   {
     "id": 5,
@@ -50,9 +50,9 @@
     "description1": "Fundamentals of Pilates with breathing and alignment.",
     "description2": "Progressive exercises for core stability.",
     "tips": "TIPS: Controlled movements and breathing for effectiveness.",
-    "videoUrl": "https://example.com/advanced-core-video",
+    "videoUrl": "https://www.youtube.com/watch?v=2En0LrCWoGI&pp=ygUOaG93IHRvIFBpbGF0ZXM%3D",
     "fitnessChallengeId": 5,
-    "imageNames": ["e_Pilates1", "e_Pilates2"]
+    "imageNames": ["e_pilates1", "e_pilates2"]
   },
   {
     "id": 6,
@@ -61,9 +61,9 @@
     "description1": "Strength, endurance, and cardiovascular exercises.",
     "description2": "Efficient workouts for maximum fitness gains.",
     "tips": "TIPS: Create a calm environment, focus on breath.",
-    "videoUrl": "https://example.com/meditation-video",
+    "videoUrl": "https://www.youtube.com/watch?v=Jzgqjb16Oek&pp=ygULaG93IHRvIGhpaXQ%3D",
     "fitnessChallengeId": 6,
-    "imageNames": ["e_HIIT1", "e_HIIT2"]
+    "imageNames": ["e_hiit1", "e_hiit2"]
   },
   {
     "id": 7,
@@ -72,9 +72,9 @@
     "description1": "Varied workouts for stamina and cycling efficiency.",
     "description2": "Suitable for all levels to improve long rides.",
     "tips": "TIPS: Balance workouts and include rest days.",
-    "videoUrl": "https://example.com/full-body-strength-video",
+    "videoUrl": "https://www.youtube.com/watch?v=4ssLDk1eX9w&pp=ygUOaG93IHRvIEN5Y2xpbmc%3D",
     "fitnessChallengeId": 7,
-    "imageNames": ["e_Cycling1", "e_Cycling2"]
+    "imageNames": ["e_cycling1", "e_cycling2"]
   },
   {
     "id": 8,
@@ -83,9 +83,9 @@
     "description1": "Advanced drills for stroke efficiency and agility.",
     "description2": "Ideal for all levels to refine swimming skills.",
     "tips": "TIPS: Focus on one drill at a time for efficiency.",
-    "videoUrl": "https://example.com/swimming-technique-video",
+    "videoUrl": "https://www.youtube.com/watch?v=pFN2n7CRqhw&pp=ygUPaG93IHRvIFN3aW1taW5n",
     "fitnessChallengeId": 8,
-    "imageNames": ["e_Swimming1", "e_Swimming2"]
+    "imageNames": ["e_swimming1", "e_swimming2"]
   },
   {
     "id": 9,
@@ -94,9 +94,9 @@
     "description1": "Exercises for major muscle groups, balanced workout.",
     "description2": "Learn proper form for results and injury prevention.",
     "tips": "TIPS: Ensure proper form for core engagement.",
-    "videoUrl": "https://example.com/advanced-core-video",
+    "videoUrl": "https://www.youtube.com/watch?v=-fT2SZ4rTUs&pp=ygUYaG93IHRvIFN0cmVuZ3RoIFRyYWluaW5n",
     "fitnessChallengeId": 9,
-    "imageNames": ["e_Strength1", "e_Strength2"]
+    "imageNames": ["e_strength1", "e_strength2"]
   },
   {
     "id": 10,
@@ -105,8 +105,8 @@
     "description1": "Variety of core-focused exercises for stability.",
     "description2": "For those with prior core training experience.",
     "tips": "TIPS: Regular practice for flexibility progress.",
-    "videoUrl": "https://example.com/yoga-flexibility-video",
+    "videoUrl": "https://www.youtube.com/watch?v=cJ1Hay2ZQeU&pp=ygUUaG93IHRvIEFkdmFuY2VkIENvcmU%3D",
     "fitnessChallengeId": 10,
-    "imageNames": ["e_Core1", "e_Core1"]
+    "imageNames": ["e_core1", "e_core1"]
   }
 ]
