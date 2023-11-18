@@ -11,9 +11,9 @@
     "id": 2,
     "name": "5K Run Training",
     "description": "Interval training for improving your 5K run time.",
-    "videoUrl": "https://example.com/5k-run-video",
+    "videoUrl": "https://www.youtube.com/watch?v=pSDkbU5FGzk",
     "fitnessChallengeId": 2,
-    "imageNames": ["5k_run_1.jpg", "5k_run_2.jpg"]
+    "imageNames": ["yoga_journey", "yoga_journey"]
   },
   {
     "id": 3,
