@@ -60,6 +60,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         searchView = findViewById(R.id.searchView);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

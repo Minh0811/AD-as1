@@ -1,16 +1,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
-    android:paddingTop="16dp"
-    android:background="@color/your_background_color">
+    >
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_img" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:background="@drawable/rounded_white_search_bar_background"
+        android:layout_margin="8dp"
          />
 
     <TextView
@@ -22,7 +26,9 @@
         android:text="@string/filter_label"
         android:paddingTop="16dp"
         android:paddingStart="16dp"
+        android:paddingRight="16dp"
         android:textStyle="bold"
+        android:textColor="#FFFFFF"
         />
 
     <Spinner
@@ -41,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/sortingSpinner"
-        android:paddingTop="16dp"/>
+        android:paddingTop="16dp"
+        />
 
 </RelativeLayout>
