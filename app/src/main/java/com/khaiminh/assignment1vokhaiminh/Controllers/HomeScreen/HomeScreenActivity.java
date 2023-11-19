@@ -21,29 +21,30 @@ import com.khaiminh.assignment1vokhaiminh.R;
 import com.khaiminh.assignment1vokhaiminh.Utils.JsonUtils;
 
 
+// Activity class for the Home Screen
 public class HomeScreenActivity extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
-    private FitnessChallengeAdapter adapter;
-    private List<FitnessChallenge> fitnessChallenges;
-    private List<FitnessChallenge> filteredChallenges;
-    private SearchView searchView;
-    private Spinner sortingSpinner;
+    private RecyclerView recyclerView; // RecyclerView for displaying fitness challenges
+    private FitnessChallengeAdapter adapter; // Adapter for RecyclerView
+    private List<FitnessChallenge> fitnessChallenges; // List of all fitness challenges
+    private List<FitnessChallenge> filteredChallenges; // Filtered list for search functionality
+    private SearchView searchView; // SearchView for searching challenges
+    private Spinner sortingSpinner; // Spinner for sorting challenges
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
+        // Initialize and set up SearchView
         SearchView searchView = findViewById(R.id.searchView);
         searchView.setIconifiedByDefault(false); // This will expand the SearchView
         searchView.setQueryHint("Search here..."); // Optional: Set a hint for the search input
 
-
+        // Initialize RecyclerView and set its layout manager
         recyclerView = findViewById(R.id.recyclerViewFitnessChallenges);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Use JsonUtils to load and parse the JSON
+        // Load fitness challenges from JSON and set up adapter
         String json = JsonUtils.loadJSONFromAsset(this, "fitness_challenges.json");
         fitnessChallenges = JsonUtils.parseFitnessChallenges(json);
         filteredChallenges = new ArrayList<>(fitnessChallenges);
@@ -61,6 +62,7 @@ public class HomeScreenActivity extends AppCompatActivity {
 
         searchView = findViewById(R.id.searchView);
 
+        // Set up SearchView listener for filtering challenges
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -74,6 +76,7 @@ public class HomeScreenActivity extends AppCompatActivity {
             }
         });
 
+        // Initialize and set up Spinner for sorting
         sortingSpinner = findViewById(R.id.sortingSpinner);
         sortingSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -94,7 +97,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         });
     }
 
-
+    // Method to filter challenges based on search text
     private void filterChallenges(String text) {
         List<FitnessChallenge> filteredList = new ArrayList<>();
         if (text.isEmpty()) {
@@ -109,6 +112,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         adapter.updateFitnessChallenges(filteredList);
     }
 
+    // Method to sort fitness challenges
     private void sortFitnessChallenges(boolean ascending) {
         if (ascending) {
             Collections.sort(filteredChallenges, (o1, o2) -> Integer.compare(o1.getDifficulty(), o2.getDifficulty()));

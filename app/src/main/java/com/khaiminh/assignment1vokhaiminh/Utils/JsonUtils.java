@@ -13,9 +13,10 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.List;
 
-// JsonUtils.java
+// Utility class for JSON operations
 public class JsonUtils {
 
+    // Loads JSON data from a file in the assets folder
     public static String loadJSONFromAsset(Context context, String fileName) {
         String json = null;
         try {
@@ -32,20 +33,25 @@ public class JsonUtils {
         return json;
     }
 
+    // Parses a JSON string into a list of FitnessChallenge objects
     public static List<FitnessChallenge> parseFitnessChallenges(String json) {
         Gson gson = new Gson();
         Type type = new TypeToken<List<FitnessChallenge>>(){}.getType();
         return gson.fromJson(json, type);
     }
+
+    // Parses a JSON string into a list of Exercise objects
     public static List<Exercise> parseExercises(String json) {
         Gson gson = new Gson();
         Type type = new TypeToken<List<Exercise>>(){}.getType();
         return gson.fromJson(json, type);
     }
 
+    // Parses a JSON string into a list of MealPlan objects
     public static List<MealPlan> parseMealPlans(String json) {
         Gson gson = new Gson();
         Type type = new TypeToken<List<MealPlan>>(){}.getType();
         return gson.fromJson(json, type);
     }
 }
+

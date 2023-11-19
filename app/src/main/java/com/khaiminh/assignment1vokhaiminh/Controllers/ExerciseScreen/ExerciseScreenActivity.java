@@ -23,35 +23,27 @@ import com.khaiminh.assignment1vokhaiminh.Utils.JsonUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+// Activity class for Exercise Screen
 public class ExerciseScreenActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private ExerciseAdapter adapter;
-    private ViewPager2 viewPagerImageSlider;
-    private ImageSliderAdapter sliderAdapter;
+    private RecyclerView recyclerView; // RecyclerView for displaying exercises
+    private ExerciseAdapter adapter; // Adapter for RecyclerView
+    private ViewPager2 viewPagerImageSlider; // ViewPager2 for image slider
+    private ImageSliderAdapter sliderAdapter; // Adapter for ViewPager2
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_screen);
 
+        // Initialize and set up views and adapters
         ImageButton btnBackToHome = findViewById(R.id.btnBackToHome);
         btnBackToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Finish the current activity
+
                 finish();
             }
         });
-        // Set up the toolbar
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Exercise");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        // Enable the back button in the ActionBar
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        }
-        // Get the Intent that started this activity and extract the fitnessChallengeId
         Intent intent = getIntent();
         int fitnessChallengeId = intent.getIntExtra("fitnessChallengeId", -1);
 
@@ -67,17 +59,17 @@ public class ExerciseScreenActivity extends AppCompatActivity {
             }
         }
 
-        // Initialize RecyclerView and Adapter
+        // Set up RecyclerView with ExerciseAdapter
         recyclerView = findViewById(R.id.recyclerViewExercises);
         adapter = new ExerciseAdapter(filteredExercises, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        // Initialize ViewPager2 and Adapter
+        // Set up ViewPager2 with ImageSliderAdapter
         viewPagerImageSlider = findViewById(R.id.viewPagerImageSlider);
         sliderAdapter = new ImageSliderAdapter(this, filteredExercises);
         viewPagerImageSlider.setAdapter(sliderAdapter);
 
-        // Button to go to Meal Plan
+        // Button click listeners and other UI interactions
         Button btnToMealPlan = findViewById(R.id.btnToMealPlan);
         btnToMealPlan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +79,7 @@ public class ExerciseScreenActivity extends AppCompatActivity {
             }
         });
     }
+    // Handles options item selected in the ActionBar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

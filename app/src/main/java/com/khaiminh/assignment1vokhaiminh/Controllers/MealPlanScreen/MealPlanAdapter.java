@@ -11,10 +11,13 @@ import com.khaiminh.assignment1vokhaiminh.Models.MealPlan;
 import com.khaiminh.assignment1vokhaiminh.R;
 import java.util.List;
 
+// Adapter class for Meal Plan RecyclerView
 public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.MealPlanViewHolder> {
 
-    private List<MealPlan> mealPlanList;
+    private List<MealPlan> mealPlanList;// List of MealPlan objects
 
+
+    // Constructor
     public MealPlanAdapter(List<MealPlan> mealPlanList) {
         this.mealPlanList = mealPlanList;
     }
@@ -48,6 +51,7 @@ public class MealPlanAdapter extends RecyclerView.Adapter<MealPlanAdapter.MealPl
         ImageView imageViewMealPlan;
         // Other views
 
+        // Inflates the item layout and creates ViewHolder
         public MealPlanViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewMealPlanName = itemView.findViewById(R.id.textViewMealPlanName);

@@ -18,21 +18,23 @@ import com.khaiminh.assignment1vokhaiminh.Utils.JsonUtils;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// Activity class for Meal Plan Screen
 public class MealPlanActivity extends AppCompatActivity {
-
-    private EditText editTextWeight;
-    private EditText editTextHeight;
-    private Button buttonCalculate;
-    private TextView textViewBmiResult;
-    private RecyclerView recyclerViewMealPlans;
-    private MealPlanAdapter mealPlanAdapter;
+    private EditText editTextWeight; // Input for weight
+    private EditText editTextHeight; // Input for height
+    private Button buttonCalculate; // Button to calculate BMI
+    private TextView textViewBmiResult; // TextView to display BMI result
+    private RecyclerView recyclerViewMealPlans; // RecyclerView for meal plans
+    private MealPlanAdapter mealPlanAdapter; // Adapter for RecyclerView
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meal_plan);
 
+        // Set up button click listener for BMI calculation
         ImageButton btnBackToExercise = findViewById(R.id.btnBackToExercise);
+        // Back button listener
         btnBackToExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +42,7 @@ public class MealPlanActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+        // Initialize views
         editTextWeight = findViewById(R.id.editTextWeight);
         editTextHeight = findViewById(R.id.editTextHeight);
         buttonCalculate = findViewById(R.id.buttonCalculate);
@@ -57,6 +59,7 @@ public class MealPlanActivity extends AppCompatActivity {
         recyclerViewMealPlans.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    // Method to calculate BMI and display relevant meal plans
     private void calculateBMI() {
         String weightStr = editTextWeight.getText().toString();
         String heightStr = editTextHeight.getText().toString();
@@ -72,6 +75,8 @@ public class MealPlanActivity extends AppCompatActivity {
             displayMealPlansForBMI(bmi);
         }
     }
+
+    // Method to display meal plans based on BMI
 
     private void displayMealPlansForBMI(float bmi) {
         String json = JsonUtils.loadJSONFromAsset(this, "meal_plans.json");
